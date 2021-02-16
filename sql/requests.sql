@@ -1,0 +1,18 @@
+CREATE TABLE users (
+    id TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    phone TEXT NOT NULL UNIQUE,
+    token TEXT NOT NULL UNIQUE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+-- 
+INSERT INTO users (name, phone)
+VALUES ('Vitya', '+992000000001');
+-- 
+SELECT *
+FROM users;
+-- 
+DROP TABLE users;
+-- 
+DELETE FROM users
+WHERE phone = '+992000000003';
